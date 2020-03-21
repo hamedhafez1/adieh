@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">ادعیه</string>
+    <string name="_1">1</string>
+    <string name="bookmark_added">این دعا نشان شد. در مراجعت بعدی به صورت خودکار این دعا انتخاب خواهد شد.</string>
+    <string name="all_correct">بسیار خب</string>
+
+    <string name="almobit">file:///android_asset/1-almobit.html</string>
+    <string name="tahlilat">file:///android_asset/2-tahlilat.html</string>
+    <string name="adedat">file:///android_asset/3-adedat.html</string>
+    <string name="taghib_zohr">file:///android_asset/4-taghib-zohr.html</string>
+    <string name="taghib_asr">file:///android_asset/5-taghib-asr.html</string>
+    <string name="taghib_maghreb">file:///android_asset/6-taghib-maghreb.html</string>
+    <string name="taghib_esha">file:///android_asset/7-taghib-esha.html</string>
+    <string name="taghib_sobh">file:///android_asset/8-taghib-sobh.html</string>
+    <string name="emad">file:///android_asset/9-emad.html</string>
+    <string name="amir">file:///android_asset/10-amir.html</string>
+    <string name="eteghad">file:///android_asset/11-eteghad.html</string>
+    <string name="tahlil">file:///android_asset/12-tahlil.html</string>
+    <string name="hojb">file:///android_asset/13-hojob.html</string>
+    <string name="asmaollah">file:///android_asset/14-asmaollah.html</string>
+    <string name="herz_sadegh">file:///android_asset/15-herz-sadegh.html</string>
+    <string name="rajab">file:///android_asset/16-rajab.html</string>
+    <string name="zelzeleh">file:///android_asset/17-zelzeleh.html</string>
+    <string name="gharigh">file:///android_asset/18-gharigh.html</string>
+    <string name="sahar">file:///android_asset/19-sahar.html</string>
+    <string name="eftetah">file:///android_asset/20-eftetah.html</string>
+    <string name="ezn">file:///android_asset/21-ezn.html</string>
+    <string name="ziarat_peighambar">file:///android_asset/22-ziarat-peighambar.html</string>
+    <string name="ziarat_fatemeh">file:///android_asset/23-ziarat-fatemeh.html</string>
+    <string name="amin">file:///android_asset/24-amin.html</string>
+    <string name="ziarat_amir">file:///android_asset/25-ziarat-amir.html</string>
+    <string name="ezn_baghii">file:///android_asset/26-ezn-baghii.html</string>
+    <string name="ziarat_hasan">file:///android_asset/27-ziarat-hasan.html</string>
+    <string name="vares">file:///android_asset/28-vares.html</string>
+    <string name="ziarat_emam_hosein">file:///android_asset/29-ziarat-emam-hosein.html</string>
+    <string name="ashora">file:///android_asset/30-ashora.html</string>
+    <string name="emam_hosein_az_dor">file:///android_asset/31-emam-hosein-az-dor.html</string>
+    <string name="kazemein">file:///android_asset/32-kazemein.html</string>
+    <string name="askari">file:///android_asset/33-askari.html</string>
+    <string name="adam">file:///android_asset/34-adam.html</string>
+    <string name="nooh">file:///android_asset/35-nooh.html</string>
+    <string name="jame_saghire">file:///android_asset/36-jame-saghire.html</string>
+    <string name="jame_kabire">file:///android_asset/37-jame-kabire.html</string>
+    <string name="veda">file:///android_asset/38-veda.html</string>
+    <string name="abbas">file:///android_asset/39-abbas.html</string>
+    <string name="masome">file:///android_asset/40-masome.html</string>
+    <string name="abdolazim">file:///android_asset/41-abdolazim.html</string>
+    <string name="setBold">درشت کردن</string>
+    <string name="setTextSize">اندازه متن</string>
+    <string name="setting_fa">تنظیمات</string>
+    <string name="rTextSize">معمولی</string>
+    <string name="lTextSize">بزرگ</string>
+    <string name="xlTextSize">خیلی بزرگ</string>
+
+    <string-array name="fehrest">
+        <item>دعای لیله المبیت</item>
+        <item>دعای تهلیلات و تعویذات</item>
+        <item>دعای اعددت</item>
+        <item>تعقیب نماز ظهر</item>
+        <item>تعقیب نماز عصر</item>
+        <item>تعقیب نماز مغرب</item>
+        <item>تعقیب نماز عشا</item>
+        <item>تعقیب نماز صبح</item>
+        <item>دعای یا عماد من لا عماد له</item>
+        <item>دعای حضرت امیر</item>
+        <item>دعای اعتقاد</item>
+        <item>دعای تهلیل</item>
+        <item>دعای حجب</item>
+        <item>دعای اسماءالله</item>
+        <!--        <item>دعای استقاله</item>-->
+        <item>حرز حضرت صادق</item>
+        <item>دعای ماه رجب</item>
+        <item>دعاي حفظ از آسيب زلزله</item>
+        <item>دعاي غریق</item>
+        <item>دعای سحر ماه مبارک</item>
+        <item>دعای افتتاح</item>
+        <item>اذن دخول</item>
+        <!--        <item>الله اکبر کبیرا</item>-->
+        <item>زیارت حضرت پیغمبر</item>
+        <item>زیارت حضرت فاطمه</item>
+        <item>زیارت امین الله</item>
+        <item>زیارت حضرت امیر</item>
+        <item>زیارت ائمه بقیع</item>
+        <item>زیارت حضرت امام حسن</item>
+        <item>زیارت وارث</item>
+        <item>زیارت حضرت سیدالشهدا</item>
+        <item>زیارت عاشورا</item>
+        <item>زیارت حضرت سیدالشهدا از دور</item>
+        <item>زيارت كاظمين</item>
+        <item>زیارت عسکریین</item>
+        <item>زیارت آدم</item>
+        <item>زیارت نوح</item>
+        <item>زیارت جامعه صغیره</item>
+        <item>زیارت جامعه کبیره</item>
+        <item>زیارت وداع</item>
+        <item>زیارت حضرت عباس</item>
+        <item>زیارت حضرت معصومه</item>
+        <item>زيارت حضرت عبدالعظيم</item>
+        <!--        <item>دعای بعد از زیارت حضرت سیدالشهدا</item>-->
+        <!--        <item>دعای دوم بعد از زیارت حضرت سیدالشهدا</item>-->
+    </string-array>
+</resources>

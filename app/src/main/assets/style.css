@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'ketab';
+    src: url("file:///android_asset/fonts/ketabona.ttf");
+}
+
+body{
+    font-family:'ketab';
+    font-size: 23pt;
+    /*font-weight:bold;*/
+    text-align:justify;
+    direction:rtl;
+    line-height:1.67;
+    background-color:#f4f4e2;
+    color:#282723;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h5{
+    text-align:center;
+    margin-top:-1px;
+    margin-bottom:-3px;
+}
+
+h6{
+    text-align:center;
+    margin-top:-1px;
+    margin-bottom:-3px;
+}
+
+.of-god{
+    text-align:center;
+    margin-top:-20px;
+    margin-bottom:-20px;
+}

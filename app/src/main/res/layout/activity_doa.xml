@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2eecb"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".DoaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <ImageButton
+            android:id="@+id/btnSetting"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="@string/setting_fa" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:entries="@array/fehrest"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:spinnerMode="dropdown" />
+
+        <ImageButton
+            android:id="@+id/bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dp"
+            android:background="@drawable/bookmark"
+            android:contentDescription="@string/_1"
+            android:src="@drawable/ic_bookmark_border_white_24dp" />
+
+    </LinearLayout>
+
+    <!--    <SeekBar-->
+    <!--        android:id="@+id/seekbar"-->
+    <!--        style="@style/Widget.AppCompat.SeekBar.Discrete"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="24dp"-->
+    <!--        android:drawingCacheQuality="auto"-->
+    <!--        android:hapticFeedbackEnabled="true"-->
+    <!--        android:max="5"-->
+    <!--        android:progress="0" />-->
+
+    <!--    <CheckBox-->
+    <!--        android:id="@+id/chkBold"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="درشت کردن"-->
+    <!--        android:textStyle="bold"/>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:background="@color/colorAccent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+        <WebView
+            android:id="@+id/web_doa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>
