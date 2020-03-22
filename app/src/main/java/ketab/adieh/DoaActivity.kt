@@ -8,6 +8,7 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.*
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -46,10 +47,11 @@ class DoaActivity : AppCompatActivity(), SettingListener {
         setUpActionBar()
 
         webView?.settings?.javaScriptEnabled = true
-        bookmark!!.setOnClickListener { view ->
+        bookmark!!.setOnClickListener {
             if (currentPage != intPrefs) {
                 intPrefs = currentPage
-                view!!.setBackgroundResource(R.drawable.mark_2)
+//                view!!.setBackgroundResource(R.drawable.mark_2)
+                bookmark!!.setImageResource(R.drawable.ic_bookmark_fill_24dp)
                 val snackBar = Snackbar.make(findViewById(android.R.id.content), R.string.bookmark_added, Snackbar.LENGTH_INDEFINITE)
                 val snackBarView = snackBar.view
                 snackBarView.layoutDirection = View.LAYOUT_DIRECTION_RTL
@@ -58,11 +60,12 @@ class DoaActivity : AppCompatActivity(), SettingListener {
                 textView.maxLines = 3
                 snackBar.setAction(R.string.all_correct) { snackBar.dismiss() }
                         .setActionTextColor(ContextCompat.getColor(this, R.color.colorPrimary))
-                        .setDuration(5000)
+                        .setDuration(3500)
                         .show()
             } else {
-                intPrefs = 0
-                bookmark!!.setBackgroundResource(R.drawable.mark_1)
+                intPrefs = 1
+//                bookmark!!.setBackgroundResource(R.drawable.mark_1)
+                bookmark!!.setImageResource(R.drawable.ic_bookmark_border_white_24dp)
             }
         }
 
@@ -78,6 +81,13 @@ class DoaActivity : AppCompatActivity(), SettingListener {
         isBold = textIsBold
         textSize = textSizePrefs
 
+        webView?.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView, url: String) {
+                super.onPageFinished(webView, url)
+                injectCssFontSize(textSize)
+                injectCSSBold(isBold!!)
+            }
+        }
         spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 currentPage = position
@@ -85,8 +95,6 @@ class DoaActivity : AppCompatActivity(), SettingListener {
                 Handler().postDelayed({
                     try {
                         webView?.loadUrl(getString(page))
-                        injectCssFontSize(textSize)
-                        injectCSSBold(isBold!!)
                         setBookMarkBackground(position)
                     } catch (e: Exception) {
                         Log.d("log", e.message!!)
@@ -108,7 +116,7 @@ class DoaActivity : AppCompatActivity(), SettingListener {
     override fun changeSize(size: Int) {
         injectCssFontSize(size)
         textSizePrefs = size
-        textSize = size
+        this.textSize = size
     }
 
     override fun setBold(isBold: Boolean) {
@@ -167,9 +175,11 @@ class DoaActivity : AppCompatActivity(), SettingListener {
 
     private fun setBookMarkBackground(position: Int) {
         if (position == intPrefs) {
-            bookmark?.setBackgroundResource(R.drawable.mark_2)
+//            bookmark?.setBackgroundResource(R.drawable.mark_2)
+            bookmark?.setImageResource(R.drawable.ic_bookmark_fill_24dp)
         } else {
-            bookmark?.setBackgroundResource(R.drawable.mark_1)
+//            bookmark?.setBackgroundResource(R.drawable.mark_1)
+            bookmark?.setImageResource(R.drawable.ic_bookmark_border_white_24dp)
         }
     }
 

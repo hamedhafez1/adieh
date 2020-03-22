@@ -20,8 +20,8 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:background="?selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_settings"
-            android:contentDescription="@string/setting_fa" />
+            android:contentDescription="@string/setting_fa"
+            android:src="@drawable/ic_settings" />
 
         <Spinner
             android:id="@+id/spinner"
@@ -36,34 +36,27 @@
             android:layoutDirection="rtl"
             android:spinnerMode="dropdown" />
 
+        <!--<ImageButton-->
+        <!--android:id="@+id/bookmark"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_margin="4dp"-->
+        <!--android:background="@drawable/bookmark"-->
+        <!--android:contentDescription="@string/_1"-->
+        <!--android:src="@drawable/ic_bookmark_border_white_24dp" />-->
+
         <ImageButton
             android:id="@+id/bookmark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_gravity="center_vertical"
             android:layout_margin="4dp"
-            android:background="@drawable/bookmark"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/_1"
             android:src="@drawable/ic_bookmark_border_white_24dp" />
 
     </LinearLayout>
-
-    <!--    <SeekBar-->
-    <!--        android:id="@+id/seekbar"-->
-    <!--        style="@style/Widget.AppCompat.SeekBar.Discrete"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="24dp"-->
-    <!--        android:drawingCacheQuality="auto"-->
-    <!--        android:hapticFeedbackEnabled="true"-->
-    <!--        android:max="5"-->
-    <!--        android:progress="0" />-->
-
-    <!--    <CheckBox-->
-    <!--        android:id="@+id/chkBold"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="درشت کردن"-->
-    <!--        android:textStyle="bold"/>-->
 
     <View
         android:layout_width="match_parent"
@@ -83,4 +76,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>
+
 </LinearLayout>

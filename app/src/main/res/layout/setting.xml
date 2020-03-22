@@ -103,7 +103,8 @@
         android:layout_margin="15dp"
         android:text="@string/setBold"
         android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layoutDirection="rtl"/>
 
 
 </LinearLayout>

@@ -7,8 +7,6 @@ import android.view.*
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.RadioGroup
-import android.widget.TextView
-import androidx.core.view.size
 import androidx.fragment.app.DialogFragment
 
 class SettingDialogFragment(private val settingListener: SettingListener,
@@ -30,12 +28,10 @@ class SettingDialogFragment(private val settingListener: SettingListener,
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val seekBar = view.findViewById<SeekBar>(R.id.seekbar)
         val checkBox = view.findViewById<CheckBox>(R.id.chkBold)
         val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroup)
-        val dialogTitle = view.findViewById<TextView>(R.id.dialogTitle)
 
-        radioGroup.setOnCheckedChangeListener { group, checkedId ->
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
             var size = 23
             when (checkedId) {
                 R.id.rbRegular -> size = 23
@@ -49,26 +45,9 @@ class SettingDialogFragment(private val settingListener: SettingListener,
             25 -> radioGroup.check(R.id.rbLarge)
             28 -> radioGroup.check(R.id.rbXLarge)
         }
-        /*seekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                var size = 23
-                when (progress) {
-                    0 -> size = 23
-                    1 -> size = 25
-                    2 -> size = 28
-                }
-                settingListener.changeSize(size)
-            }
-
-            override fun onStartTrackingTouch(seekBar: SeekBar) {
-
-            }
-
-            override fun onStopTrackingTouch(seekBar: SeekBar) {
-            }
-        })*/
         checkBox.isChecked = textIsBold
         checkBox.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean -> settingListener.setBold(isChecked) }
     }
+
 
 }
