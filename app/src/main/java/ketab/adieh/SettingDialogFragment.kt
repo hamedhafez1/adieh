@@ -3,10 +3,12 @@ package ketab.adieh
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.*
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.RadioGroup
+import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 
 class SettingDialogFragment(private val settingListener: SettingListener,
@@ -30,6 +32,8 @@ class SettingDialogFragment(private val settingListener: SettingListener,
         super.onViewCreated(view, savedInstanceState)
         val checkBox = view.findViewById<CheckBox>(R.id.chkBold)
         val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroup)
+        val txtContactUs = view.findViewById<TextView>(R.id.txtContactUs)
+        txtContactUs.movementMethod = LinkMovementMethod.getInstance()
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             var size = 23

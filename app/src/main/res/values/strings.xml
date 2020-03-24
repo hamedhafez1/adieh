@@ -51,6 +51,8 @@
     <string name="rTextSize">معمولی</string>
     <string name="lTextSize">بزرگ</string>
     <string name="xlTextSize">خیلی بزرگ</string>
+    <string name="contactUs">ارتباط با توسعه دهنده</string>
+    <string name="contactUsLink"><a href="https://www.facebook.com/hamedhafezQ">ارتباط با توسعه دهنده</a></string>
 
     <string-array name="fehrest">
         <item>دعای لیله المبیت</item>

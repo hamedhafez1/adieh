@@ -6,7 +6,6 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/dialogTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -15,56 +14,12 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="23sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:layoutDirection="rtl"
-            android:paddingEnd="8dp"
-            android:text="@string/rTextSize" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/lTextSize" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="start"
-            android:paddingRight="8dp"
-            android:text="@string/xlTextSize" />
-    </LinearLayout>
-
-    <androidx.appcompat.widget.AppCompatSeekBar
-        android:id="@+id/seekbar"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:drawingCacheQuality="auto"
-        android:hapticFeedbackEnabled="true"
-        android:max="2"
-        android:progress="0"
-        android:thumb="@drawable/thumb_image"
-        android:visibility="gone" />
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:layoutDirection="rtl"
         android:orientation="horizontal"
         android:textDirection="rtl">
@@ -75,9 +30,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="?selectableItemBackgroundBorderless"
+            android:checked="true"
             android:text="@string/rTextSize"
-            android:textColor="@color/colorPrimaryDark"
-            android:checked="true"/>
+            android:textColor="@color/colorPrimaryDark" />
 
         <RadioButton
             android:id="@+id/rbLarge"
@@ -101,10 +56,24 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_margin="15dp"
+        android:layoutDirection="rtl"
         android:text="@string/setBold"
         android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        android:layoutDirection="rtl"/>
+        android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/txtContactUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:drawableEnd="@drawable/ic_info_24dp"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:linksClickable="true"
+        android:text="@string/contactUsLink"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="14sp" />
 
 </LinearLayout>

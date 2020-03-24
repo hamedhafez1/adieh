@@ -36,16 +36,6 @@
             android:layoutDirection="rtl"
             android:spinnerMode="dropdown" />
 
-        <!--<ImageButton-->
-        <!--android:id="@+id/bookmark"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center_vertical"-->
-        <!--android:layout_margin="4dp"-->
-        <!--android:background="@drawable/bookmark"-->
-        <!--android:contentDescription="@string/_1"-->
-        <!--android:src="@drawable/ic_bookmark_border_white_24dp" />-->
-
         <ImageButton
             android:id="@+id/bookmark"
             android:layout_width="36dp"
@@ -74,7 +64,9 @@
         <WebView
             android:id="@+id/web_doa"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="0dp" />
     </FrameLayout>
 
 </LinearLayout>
