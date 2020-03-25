@@ -32,8 +32,7 @@ class SettingDialogFragment(private val settingListener: SettingListener,
         super.onViewCreated(view, savedInstanceState)
         val checkBox = view.findViewById<CheckBox>(R.id.chkBold)
         val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroup)
-        val txtContactUs = view.findViewById<TextView>(R.id.txtContactUs)
-        txtContactUs.movementMethod = LinkMovementMethod.getInstance()
+        view.findViewById<TextView>(R.id.txtContactUs).movementMethod = LinkMovementMethod.getInstance()
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             var size = 23

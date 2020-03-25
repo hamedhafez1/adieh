@@ -50,7 +50,6 @@ class DoaActivity : AppCompatActivity(), SettingListener {
         bookmark!!.setOnClickListener {
             if (currentPage != intPrefs) {
                 intPrefs = currentPage
-//                view!!.setBackgroundResource(R.drawable.mark_2)
                 bookmark!!.setImageResource(R.drawable.ic_bookmark_fill_24dp)
                 val snackBar = Snackbar.make(findViewById(android.R.id.content), R.string.bookmark_added, Snackbar.LENGTH_INDEFINITE)
                 val snackBarView = snackBar.view
@@ -64,7 +63,6 @@ class DoaActivity : AppCompatActivity(), SettingListener {
                         .show()
             } else {
                 intPrefs = 1
-//                bookmark!!.setBackgroundResource(R.drawable.mark_1)
                 bookmark!!.setImageResource(R.drawable.ic_bookmark_border_white_24dp)
             }
         }
@@ -99,7 +97,7 @@ class DoaActivity : AppCompatActivity(), SettingListener {
                     } catch (e: Exception) {
                         Log.d("log", e.message!!)
                     }
-                }, 350)
+                }, 250)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -175,10 +173,8 @@ class DoaActivity : AppCompatActivity(), SettingListener {
 
     private fun setBookMarkBackground(position: Int) {
         if (position == intPrefs) {
-//            bookmark?.setBackgroundResource(R.drawable.mark_2)
             bookmark?.setImageResource(R.drawable.ic_bookmark_fill_24dp)
         } else {
-//            bookmark?.setBackgroundResource(R.drawable.mark_1)
             bookmark?.setImageResource(R.drawable.ic_bookmark_border_white_24dp)
         }
     }
