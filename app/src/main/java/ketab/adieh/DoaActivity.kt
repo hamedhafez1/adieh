@@ -13,27 +13,14 @@ import android.widget.*
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.google.android.material.snackbar.Snackbar
 
 @SuppressLint("SetJavaScriptEnabled")
 class DoaActivity : AppCompatActivity(), SettingListener {
 
-    @BindView(R.id.web_doa)
-    @JvmField
     var webView: WebView? = null
-
-    @BindView(R.id.btnSetting)
-    @JvmField
     var btnSetting: ImageButton? = null
-
-    @BindView(R.id.bookmark)
-    @JvmField
     var bookmark: ImageButton? = null
-
-    @BindView(R.id.spinner)
-    @JvmField
     var spinner: Spinner? = null
     private var page: Int = 0
     private var currentPage: Int = 0
@@ -43,7 +30,11 @@ class DoaActivity : AppCompatActivity(), SettingListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doa)
-        ButterKnife.bind(this)
+
+        webView = findViewById(R.id.web_doa)
+        btnSetting = findViewById(R.id.btnSetting)
+        bookmark = findViewById(R.id.bookmark)
+        spinner = findViewById(R.id.spinner)
         setUpActionBar()
 
         webView?.settings?.javaScriptEnabled = true
@@ -186,7 +177,7 @@ class DoaActivity : AppCompatActivity(), SettingListener {
             val lp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT)
             view.layoutParams = lp
-            view.findViewById<TextView>(R.id.txt_banner_title)
+//            view.findViewById<TextView>(R.id.txt_banner_title)
             supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
             supportActionBar?.customView = view
         } catch (e: Exception) {

@@ -34,6 +34,9 @@ class SettingDialogFragment(private val settingListener: SettingListener,
         val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroup)
         view.findViewById<TextView>(R.id.txtContactUs).movementMethod = LinkMovementMethod.getInstance()
 
+        val txtVersion = view.findViewById<TextView>(R.id.txtVersion)
+        txtVersion.text = getString(R.string.version, "ادعیه نسخه", " : ", BuildConfig.VERSION_NAME)
+
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             var size = 23
             when (checkedId) {

@@ -34,3 +34,8 @@ output.json
 #NDK
 obj/
 .externalNativeBuild
+/hs_err_pid1340.log
+/gradle/wrapper/
+/hs_err_pid3988.log
+/replay_pid3988.log
+/replay_pid1340.log

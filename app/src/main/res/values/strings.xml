@@ -3,6 +3,15 @@
     <string name="_1">1</string>
     <string name="bookmark_added">این دعا نشان شد. در مراجعت بعدی به صورت خودکار این دعا انتخاب خواهد شد.</string>
     <string name="all_correct">بسیار خب</string>
+    <string name="setBold">درشت کردن</string>
+    <string name="setTextSize">اندازه متن</string>
+    <string name="setting_fa">تنظیمات</string>
+    <string name="rTextSize">معمولی</string>
+    <string name="lTextSize">بزرگ</string>
+    <string name="xlTextSize">خیلی بزرگ</string>
+    <string name="contactUs">ارتباط با توسعه دهنده</string>
+    <string name="contactUsLink"><a href="https://www.facebook.com/hamedhafezQ">ارتباط با توسعه دهنده</a></string>
+    <string name="version">%1$s %2$s %3$s</string>
 
     <string name="almobit">file:///android_asset/1-almobit.html</string>
     <string name="tahlilat">file:///android_asset/2-tahlilat.html</string>
@@ -45,14 +54,6 @@
     <string name="abbas">file:///android_asset/39-abbas.html</string>
     <string name="masome">file:///android_asset/40-masome.html</string>
     <string name="abdolazim">file:///android_asset/41-abdolazim.html</string>
-    <string name="setBold">درشت کردن</string>
-    <string name="setTextSize">اندازه متن</string>
-    <string name="setting_fa">تنظیمات</string>
-    <string name="rTextSize">معمولی</string>
-    <string name="lTextSize">بزرگ</string>
-    <string name="xlTextSize">خیلی بزرگ</string>
-    <string name="contactUs">ارتباط با توسعه دهنده</string>
-    <string name="contactUsLink"><a href="https://www.facebook.com/hamedhafezQ">ارتباط با توسعه دهنده</a></string>
 
     <string-array name="fehrest">
         <item>دعای لیله المبیت</item>
@@ -69,7 +70,6 @@
         <item>دعای تهلیل</item>
         <item>دعای حجب</item>
         <item>دعای اسماءالله</item>
-        <!--        <item>دعای استقاله</item>-->
         <item>حرز حضرت صادق</item>
         <item>دعای ماه رجب</item>
         <item>دعاي حفظ از آسيب زلزله</item>
@@ -77,7 +77,6 @@
         <item>دعای سحر ماه مبارک</item>
         <item>دعای افتتاح</item>
         <item>اذن دخول</item>
-        <!--        <item>الله اکبر کبیرا</item>-->
         <item>زیارت حضرت پیغمبر</item>
         <item>زیارت حضرت فاطمه</item>
         <item>زیارت امین الله</item>
@@ -98,7 +97,5 @@
         <item>زیارت حضرت عباس</item>
         <item>زیارت حضرت معصومه</item>
         <item>زيارت حضرت عبدالعظيم</item>
-        <!--        <item>دعای بعد از زیارت حضرت سیدالشهدا</item>-->
-        <!--        <item>دعای دوم بعد از زیارت حضرت سیدالشهدا</item>-->
     </string-array>
 </resources>
