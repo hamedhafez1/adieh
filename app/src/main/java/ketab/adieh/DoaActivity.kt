@@ -19,9 +19,9 @@ import com.google.android.material.snackbar.Snackbar
 class DoaActivity : AppCompatActivity(), SettingListener {
 
     var webView: WebView? = null
-    var btnSetting: ImageButton? = null
-    var bookmark: ImageButton? = null
-    var spinner: Spinner? = null
+    private var btnSetting: ImageButton? = null
+    private var bookmark: ImageButton? = null
+    private var spinner: Spinner? = null
     private var page: Int = 0
     private var currentPage: Int = 0
     var isBold: Boolean? = false
