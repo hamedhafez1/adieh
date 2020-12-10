@@ -5,37 +5,33 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.*
-import android.widget.CheckBox
 import android.widget.CompoundButton
-import android.widget.RadioGroup
-import android.widget.TextView
 import androidx.fragment.app.DialogFragment
+import ketab.adieh.databinding.SettingBinding
 
 class SettingDialogFragment(private val settingListener: SettingListener,
                             private val textSizePrefs: Int,
                             private val textIsBold: Boolean) : DialogFragment() {
+
+    private lateinit var binding: SettingBinding
 
     override fun onStart() {
         super.onStart()
         dialog!!.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val window = dialog!!.window
         window!!.setGravity(Gravity.BOTTOM)
         window.requestFeature(Window.FEATURE_NO_TITLE)
         window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        return inflater.inflate(R.layout.setting, container, false)
-    }
+        binding = SettingBinding.inflate(inflater, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val checkBox = view.findViewById<CheckBox>(R.id.chkBold)
-        val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroup)
-        view.findViewById<TextView>(R.id.txtContactUs).movementMethod = LinkMovementMethod.getInstance()
+        val checkBox = binding.chkBold
+        val radioGroup = binding.radioGroup
+        binding.txtContactUs.movementMethod = LinkMovementMethod.getInstance()
 
-        val txtVersion = view.findViewById<TextView>(R.id.txtVersion)
-        txtVersion.text = getString(R.string.version, "ادعیه نسخه", " : ", BuildConfig.VERSION_NAME)
+        binding.txtVersion.text = getString(R.string.version, "ادعیه نسخه", " : ", BuildConfig.VERSION_NAME)
 
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             var size = 23
@@ -53,7 +49,8 @@ class SettingDialogFragment(private val settingListener: SettingListener,
         }
         checkBox.isChecked = textIsBold
         checkBox.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean -> settingListener.setBold(isChecked) }
-    }
 
+        return binding.root
+    }
 
 }

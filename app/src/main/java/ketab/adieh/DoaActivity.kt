@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.webkit.WebView
@@ -14,6 +15,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
+import ketab.adieh.databinding.ActivityDoaBinding
 
 @SuppressLint("SetJavaScriptEnabled")
 class DoaActivity : AppCompatActivity(), SettingListener {
@@ -29,12 +31,15 @@ class DoaActivity : AppCompatActivity(), SettingListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_doa)
+        val binding = ActivityDoaBinding.inflate(layoutInflater)
 
-        webView = findViewById(R.id.web_doa)
-        btnSetting = findViewById(R.id.btnSetting)
-        bookmark = findViewById(R.id.bookmark)
-        spinner = findViewById(R.id.spinner)
+        webView = binding.webDoa
+        btnSetting = binding.btnSetting
+        bookmark = binding.bookmark
+        spinner = binding.spinner
+
+        setContentView(binding.root)
+
         setUpActionBar()
 
         webView?.settings?.javaScriptEnabled = true
@@ -46,7 +51,7 @@ class DoaActivity : AppCompatActivity(), SettingListener {
                 val snackBarView = snackBar.view
                 snackBarView.layoutDirection = View.LAYOUT_DIRECTION_RTL
                 snackBarView.setBackgroundColor(Color.parseColor("#ef161616"))
-                val textView = snackBarView.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
+                val textView = snackBarView.findViewById<TextView>(R.id.snackbar_text)
                 textView.maxLines = 3
                 snackBar.setAction(R.string.all_correct) { snackBar.dismiss() }
                         .setActionTextColor(ContextCompat.getColor(this, R.color.colorPrimary))
@@ -81,7 +86,7 @@ class DoaActivity : AppCompatActivity(), SettingListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 currentPage = position
                 page = positionToPage(position)
-                Handler().postDelayed({
+                Handler(Looper.getMainLooper()).postDelayed({
                     try {
                         webView?.loadUrl(getString(page))
                         setBookMarkBackground(position)
@@ -177,7 +182,6 @@ class DoaActivity : AppCompatActivity(), SettingListener {
             val lp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT)
             view.layoutParams = lp
-//            view.findViewById<TextView>(R.id.txt_banner_title)
             supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
             supportActionBar?.customView = view
         } catch (e: Exception) {
