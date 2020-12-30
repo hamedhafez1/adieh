@@ -47,16 +47,7 @@ class DoaActivity : AppCompatActivity(), SettingListener {
             if (currentPage != intPrefs) {
                 intPrefs = currentPage
                 bookmark!!.setImageResource(R.drawable.ic_bookmark_fill_24dp)
-                val snackBar = Snackbar.make(findViewById(android.R.id.content), R.string.bookmark_added, Snackbar.LENGTH_INDEFINITE)
-                val snackBarView = snackBar.view
-                snackBarView.layoutDirection = View.LAYOUT_DIRECTION_RTL
-                snackBarView.setBackgroundColor(Color.parseColor("#ef161616"))
-                val textView = snackBarView.findViewById<TextView>(R.id.snackbar_text)
-                textView.maxLines = 3
-                snackBar.setAction(R.string.all_correct) { snackBar.dismiss() }
-                        .setActionTextColor(ContextCompat.getColor(this, R.color.colorPrimary))
-                        .setDuration(3500)
-                        .show()
+                showSnackBar()
             } else {
                 intPrefs = 1
                 bookmark!!.setImageResource(R.drawable.ic_bookmark_border_white_24dp)
@@ -167,6 +158,19 @@ class DoaActivity : AppCompatActivity(), SettingListener {
         return page
     }
 
+    private fun showSnackBar() {
+        val snackBar = Snackbar.make(findViewById(android.R.id.content), R.string.bookmark_added, Snackbar.LENGTH_INDEFINITE)
+        val snackBarView = snackBar.view
+        snackBarView.layoutDirection = View.LAYOUT_DIRECTION_RTL
+        snackBarView.setBackgroundColor(Color.parseColor("#ef161616"))
+        val textView = snackBarView.findViewById<TextView>(R.id.snackbar_text)
+        textView.maxLines = 3
+        snackBar.setAction(R.string.all_correct) { snackBar.dismiss() }
+                .setActionTextColor(ContextCompat.getColor(this, R.color.colorPrimary))
+                .setDuration(3500)
+                .show()
+    }
+
     private fun setBookMarkBackground(position: Int) {
         if (position == intPrefs) {
             bookmark?.setImageResource(R.drawable.ic_bookmark_fill_24dp)
@@ -187,7 +191,6 @@ class DoaActivity : AppCompatActivity(), SettingListener {
         } catch (e: Exception) {
             Log.e("log", e.message!!)
         }
-
     }
 
     private var intPrefs: Int
